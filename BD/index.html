@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>学历提升报考中心</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-store, must-revalidate">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://pg-chatn3.bjmantis.net/chat/js/dist/mantis.min.js?7701#62148989ea194933acb10a28"></script>
+		<style type="text/css">
+			.part1 .bt_tit .bt_bot {
+				float: right;
+				display: flex;
+				margin-top: 6%;
+			}
+			.part1 .bt_tit .bt_bot .bot_l {
+				background: #fff;
+				border-radius: 2px 0 0 2px;
+				color: #1a1a1a;
+				padding: 4px;
+			}
+			.part1 .bt_tit .bt_bot .bot_r {
+				background: #10d262;
+				border-radius: 0 2px 2px 0;
+				color: #fff;
+				padding: 4px;
+			}
+			.part1 .bt_tit .bt_bot .bot_r span {
+				vertical-align: top;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="part1" >
+			<img src="images/banner.jpg" />
+			
+		</section>
+
+		<div class="seven">
+			<form id="messageForm">
+				<div class="seven_2">
+					<div class="seven_question"> 1、您目前的学历是？
+						<font color="red">*</font>
+
+						<br>
+						<br>
+						<label>
+							<input class="msg_other" title="目前学历" name="msg_other2" value="高中及以下"
+								type="radio">高中及以下</label>
+						<label>
+							<input class="msg_other" title="目前学历" name="msg_other2" value="大专" checked="checked"
+								type="radio">中专</label>
+						<br>
+						<br>
+						<label>
+							<input class="msg_other" title="目前学历" name="msg_other2" value="本科" type="radio">大专</label>
+						<label>
+							<input class="msg_other" title="目前学历" name="msg_other2" value="硕士/博士"
+								type="radio">其他</label>
+
+
+						<br>
+						<br> 2、您的年龄段？
+						<font color="red">*</font>
+
+						<br>
+						<br>
+						<label>
+							<input class="msg_other" title="工作年限" name="msg_other3" value="1-3年" checked="checked"
+								type="radio">18岁以下</label>
+						<label>
+							<input class="msg_other" title="工作年限" name="msg_other3" value="3-6年"
+								type="radio">18-21岁</label>
+						<br>
+						<br>
+						<label>
+							<input class="msg_other" title="工作年限" name="msg_other3" value="6-10年"
+								type="radio">21-30岁</label>
+						<label>
+							<input class="msg_other" title="工作年限" name="msg_other3" value="10年以上"
+								type="radio">30岁以上</label>
+
+						<br>
+						<br> 3、您为什么提升学历
+						<font color="red">*</font>
+
+						<br>
+						<br>
+						<label>
+							<input class="msg_other" title="所学专业" name="msg_other1" value="计算机类" checked="checked"
+								type="radio">考公务员</label>
+						<label>
+							<input class="msg_other" title="所学专业" name="msg_other1" value="教育类" type="radio">工作需要</label>
+						<br>
+						<br>
+				
+						<label>
+							<input class="msg_other" title="所学专业" name="msg_other1" value="医学" type="radio">考证需要</label>
+						<label>
+							<input class="msg_other" title="所学专业" name="msg_other1" value="其他" type="radio">其他</label>	
+					
+						<br>
+
+					</div>
+					<div class="seven_phone">
+						<h4>手机
+							<font color="red">*</font>
+						</h4>
+						<input class="form-control msg_text" placeholder="输入手机号" value="" type="tel"
+							name="msg_userphone" id="tel" autocomplete="off">
+					</div>
+					<div class="btn seven_tj">
+						<button class="msg_submit" id="submit" type="button">提交报名</button>
+					</div>
+
+				</div>
+				<script>
+					$(function() {
+						$('#submit').click(function() {
+							var temp = {}
+							$('#messageForm input').each(function() {
+								var name = $(this).attr('name')
+								if (name) temp[name] = $(this).val()
+							})
+							//if(!temp.msg_username) {
+							//alert('请填写您的姓名，以便我们及时联系您。')
+							//return
+							//}
+							if (!temp.msg_userphone) {
+								alert('请填写您的手机号，以便我们及时联系您。')
+								return
+							}
+							if (!$("#tel").val().match(
+									/^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(18[0-9]{1})|(19[0-9]{1})|(17[0-9]{1}))+\d{8})$/
+								)) {
+								$("#tel").focus();
+								alert("手机号码有误，请重填!");
+								return false;
+							}
+
+							// 参数3
+							var content = '提交获取' // 自定义字段的内容会在系统留言查询数据的备注里显示 (根据需求变更)
+
+							// 参数4
+							var others = {
+								customerFieldMap: { // 自定义字段,此对象中的字段如果和系统中自定义字段对应上就会显示在转客后对应字段的位置，如果对应不上会显示在转客后的备注里
+									...temp
+								}
+							}
+							sendPage(temp.msg_userphone, '', content, others)
+						})
+					})
+
+					function onOK() {
+						// 提交成功的回调
+						alert("提交成功，稍后会为您发送查询结果！");
+						mantis.requestChat();
+					}
+
+					function onError() {
+						// 提交失败的回调
+						alert("提交出错，请联系在线客服");
+					}
+				</script>
+			</form>
+
+		</div>
+
+		<!-- <footer class="footer">
+		<p class="footer_p"></p>
+	</footer> -->
+	</body>
+
+</html>
